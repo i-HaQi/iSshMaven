@@ -1,5 +1,3 @@
-package com.alan.struts2.web;
-
 /**
  * Created by i-lan on 16/3/11.
  */
