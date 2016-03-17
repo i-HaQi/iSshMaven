@@ -31,7 +31,7 @@ public class ServiceImplTest {
     @Before
     public void setUp() throws Exception {
         startMili = System.currentTimeMillis();// 当前时间对应的毫秒数
-        System.out.println("方法开始");
+        System.out.println("方法开始!");
     }
 
     @After
