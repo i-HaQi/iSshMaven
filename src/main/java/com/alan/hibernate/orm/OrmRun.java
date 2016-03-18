@@ -1,19 +1,26 @@
 package com.alan.hibernate.orm;
 
+import org.apache.log4j.PropertyConfigurator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
 import java.util.Date;
 import java.util.List;
-
 public class OrmRun {
 
+    private static Logger logger  =  LoggerFactory.getLogger(OrmRun.class);
+
     public static void main(String[] args) {
+
+        logger.error("Hello，{}——{}","阿澜","To Be The One!");
 
         XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource(
                 "applicationContext.xml"));
 
         ICatService catService = (ICatService) factory.getBean("catService");
+
 
         Cat cat1 = new Cat();
         cat1.setName("Hello world");
@@ -34,6 +41,7 @@ public class OrmRun {
 
         for (Cat c : catList) {
             System.out.println("Name: " + c.getName());
+
         }
 
     }
